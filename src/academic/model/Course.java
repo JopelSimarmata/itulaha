@@ -55,6 +55,7 @@ public class Course {
                 System.out.printf(";");
             }
         }
+        System.out.printf("\n");
     }
 
 
