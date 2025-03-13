@@ -62,6 +62,14 @@ public class Driver2 {
                 Student student = new Student(temp[1], temp[2], temp[3], temp[4]);
                 daftarMahasiswa.add(student);
 
+                for(int i = 0; i < daftarMahasiswa.size(); i++){
+                    for(int j = 0; j < daftarMahasiswa.size(); j++){
+                        if(daftarMahasiswa.get(i).getNim().equals(daftarMahasiswa.get(j).getNim()) && i != j){
+                            daftarMahasiswa.remove(j);
+                        }
+                    }
+                }
+
 
             } else if(temp[0].equals("enrollment-add")){
                 Enrollment enrollment = new Enrollment(temp[1], temp[2], temp[3], temp[4]);
