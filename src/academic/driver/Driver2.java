@@ -87,7 +87,7 @@ public class Driver2 {
             daftarLecturers.get(i).DisplayLecturer();
         }
 
-        for(int i = daftarMataKuliah.size()-1; i >= 0; i--){
+        for(int i = 0; i < daftarMataKuliah.size(); i++){
             daftarMataKuliah.get(i).DisplayCourse();
         }
         for(int i = 0; i < daftarMahasiswa.size(); i++){
