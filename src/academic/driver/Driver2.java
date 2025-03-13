@@ -72,16 +72,19 @@ public class Driver2 {
                 temp[5] = splitCommand[5];
                 Lecturer lecturer = new Lecturer(temp[1], temp[2], temp[3] ,temp[4], temp[5]);
                 daftarLecturers.add(lecturer);
+
+                for(int i = 0; i < daftarLecturers.size(); i++){
+                    for(int j = 0; j < daftarLecturers.size(); j++){
+                        if(daftarLecturers.get(i).getNidn().equals(daftarLecturers.get(j).getNidn()) && i != j){
+                        daftarLecturers.remove(j);
+                        }
+                    }
+                }
+
+                
             }
         }
 
-        for(int i = 0; i < daftarLecturers.size(); i++){
-            for(int j = 0; j < daftarLecturers.size(); j++){
-                if(daftarLecturers.get(i).getNidn().equals(daftarLecturers.get(j).getNidn()) && i != j){
-                    daftarLecturers.remove(j);
-                }
-            }
-        }
 
         for(int i = 0; i < daftarLecturers.size();i++){
             daftarLecturers.get(i).DisplayLecturer();
